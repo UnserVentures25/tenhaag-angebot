@@ -174,6 +174,51 @@ section{padding:120px 0}
 .long-img img{width:100%;height:100%;object-fit:cover}
 @media (max-width:900px){.long{grid-template-columns:1fr}}
 
+/* Content-Plan */
+.tabs{display:flex;flex-wrap:wrap;gap:4px;background:#fff;padding:4px;margin-bottom:28px;width:fit-content;max-width:100%}
+.tabs button{border:0;background:transparent;font:inherit;font-weight:700;font-size:15px;padding:12px 18px;cursor:pointer;color:var(--slate)}
+.tabs button[aria-selected=true]{background:var(--ink);color:#fff}
+.phases{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.phase{background:#fff;padding:26px;border-top:3px solid var(--ink)}
+.phase.hot{background:var(--ink);color:#fff;border-color:var(--coral)}
+.phase .when{font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--coral);text-transform:uppercase}
+.phase h3{font-size:26px;margin:8px 0 14px}
+.phase ul{list-style:none;margin:0;padding:0;font-size:15.5px}
+.phase li{padding:10px 0;border-top:1px solid var(--line);color:var(--slate)}
+.phase.hot li{border-color:#333;color:#cfd2d5}
+.phase li b{color:var(--ink)}
+.phase.hot li b{color:#fff}
+.rhythm{margin-top:20px;background:#fff;padding:26px}
+.rhythm h3{font-size:20px;margin-bottom:16px}
+.weeks{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.weeks div{background:var(--stone);padding:16px;display:flex;flex-direction:column;gap:4px}
+.weeks b{color:var(--coral);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.weeks span{font-weight:700}
+.weeks small{color:var(--mute);font-size:14px}
+.note{margin:16px 0 0;color:var(--mute);font-size:14px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:stretch}
+.split-img{margin:0;min-height:420px;position:relative;overflow:hidden;background:#fff}
+.split-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph{font-size:clamp(26px,3vw,36px);margin:10px 0 12px}
+.muted{color:var(--slate)}
+.shots{margin:18px 0 0;padding:0;list-style:none;counter-reset:sh}
+.shots li{counter-increment:sh;position:relative;padding:11px 0 11px 44px;border-top:1px solid var(--line);font-size:15.5px;color:var(--slate)}
+.shots li::before{content:counter(sh,decimal-leading-zero);position:absolute;left:0;top:11px;font-weight:900;color:var(--coral)}
+.shots b{color:var(--ink)}
+.deliver{margin-top:20px;background:var(--ink);color:#fff;padding:18px 20px;font-size:15.5px}
+.deliver b{color:var(--coral-soft)}
+.concepts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.concepts article{background:#fff;padding:24px;display:flex;flex-direction:column}
+.concepts h3{font-size:24px;margin:12px 0 10px}
+.concepts p{color:var(--slate);font-size:15.5px;margin:0 0 14px}
+.concepts small{margin-top:auto;font-weight:700;color:var(--coral)}
+.ecom{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.ecom div{background:#fff;padding:18px}
+.ecom h4{margin:0 0 8px;font-size:16px}
+.ecom ul{margin:0;padding-left:18px;color:var(--slate);font-size:15px;columns:1}
+@media (max-width:980px){.phases,.concepts{grid-template-columns:1fr 1fr}.weeks{grid-template-columns:1fr 1fr}.split{grid-template-columns:1fr}}
+@media (max-width:600px){.phases,.concepts,.weeks,.ecom{grid-template-columns:1fr}.tabs{width:100%}.tabs button{flex:1 1 45%;padding:10px 8px;font-size:14px}}
+
 /* Pakete */
 .toggle{display:inline-flex;background:var(--stone);padding:4px;margin-bottom:40px}
 .toggle button{border:0;background:transparent;font:inherit;font-weight:700;font-size:15px;padding:10px 18px;cursor:pointer;color:var(--slate)}
@@ -266,7 +311,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <header class="nav" id="nav">
   <div class="wrap">
     <a class="brand" href="#top"><img src="img/logo-tenhaag.svg" alt="tenhaag"><span class="x">×</span><img class="sig" src="img/unterschrift.png" alt="Yves-Len Unser"></a>
-    <nav><a href="#story">Story</a><a href="#weg">Mein Weg</a><a href="#schuhe">Schuhe</a><a href="#leistungen">Leistungen</a><a href="#pakete">Pakete</a><a href="#marktwert">Marktwert</a><a href="#kontakt">Kontakt</a></nav>
+    <nav><a href="#story">Story</a><a href="#weg">Mein Weg</a><a href="#schuhe">Schuhe</a><a href="#leistungen">Leistungen</a><a href="#contentplan">Content-Plan</a><a href="#pakete">Pakete</a><a href="#marktwert">Marktwert</a><a href="#kontakt">Kontakt</a></nav>
   </div>
 </header>
 
@@ -429,6 +474,99 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <a class="pick tilt rv" href="https://www.tenhaag-shop.de/p/sneaker-weiss-gridhaag-1331090134/" target="_blank" rel="noopener"><div class="pick-img"><img src="img/shoe-gridhaag.webp" alt="gridhaag weiß" loading="lazy"></div><span class="tag">Alltag</span><h3>gridhaag <small>weiß</small></h3><p>Papa-Alltag mit meinen zwei Töchtern: Spielplatz, Wald, Einkauf. Leicht, bequem, unkaputtbar.</p><span class="pr">99,90 € im Shop →</span></a>
     </div>
     <p class="size rv">Meine Größe: <b>43,5</b> · Gesamtwert der Erstausstattung: <b>819,40 €</b> · Wenn ihr für einen Einsatz einen besseren Schuh habt, tauschen wir gern.</p>
+  </div>
+</section>
+
+<section id="contentplan" style="background:var(--stone)">
+  <div class="wrap">
+    <div class="sec-head rv"><h2>Der Content-Plan.</h2><p>So sieht die Partnerschaft konkret aus: was auf Instagram läuft, was wir im Training drehen, was mit dem Fotografen entsteht und was ihr aus dem E-Commerce-Studio für den Shop bekommt.</p></div>
+    <div class="tabs rv" role="tablist">
+      <button role="tab" aria-selected="true" data-t="t-insta">Instagram</button>
+      <button role="tab" aria-selected="false" data-t="t-train">Training im Studio</button>
+      <button role="tab" aria-selected="false" data-t="t-camp">Shooting mit Fotograf</button>
+      <button role="tab" aria-selected="false" data-t="t-ecom">E-Commerce-Studio</button>
+    </div>
+
+    <div class="tpanel" id="t-insta">
+      <div class="phases">
+        <div class="phase"><span class="when">Bis 21.11. · Road to Hollywood</span><h3>Ankommen</h3>
+          <ul>
+            <li><b>Reel „Unboxing“:</b> „Als Kind hatte ich nie die neuen Turnschuhe. Heute packe ich sechs Paar aus.“ Sechs Kartons, eine Geschichte.</li>
+            <li><b>Reel „Leg Day“:</b> „Drei Wochen bis Hollywood. Ab heute zählt jede Einheit.“ Training mit meinem Personal Trainer im hyperhaag.</li>
+            <li><b>Stories:</b> Umfrage „Welchen tenhaag nehme ich mit nach LA?“ Die Community entscheidet mit.</li>
+            <li><b>Highlight „tenhaag“</b> wird angelegt, Rabattcode geht live.</li>
+          </ul></div>
+        <div class="phase hot"><span class="when">22.–30.11. · Finalwoche</span><h3>Hollywood</h3>
+          <ul>
+            <li><b>Täglich Stories:</b> Abflug im airhaag, Training in LA im hyperhaag, Proben, Backstage im neohaag, Walk of Fame im winhaag.</li>
+            <li><b>Reel „9 Tage in 30 Sekunden“:</b> die ganze Finalwoche, ein Schuh pro Szene.</li>
+            <li><b>Reel „Für Opa“:</b> der Moment nach dem Finale. Der emotionalste Post des Jahres.</li>
+          </ul></div>
+        <div class="phase"><span class="when">Dezember bis Februar · Danach</span><h3>Alltag</h3>
+          <ul>
+            <li><b>Reel „Ein Schuh, drei Outfits“:</b> „Ein Mann braucht keine zehn Paar Schuhe. Er braucht die richtigen drei.“ Gym, Office, Abend.</li>
+            <li><b>Reel „Papa-Test“:</b> „Mit zwei Töchtern hast du keine Zeit für Schnürsenkel.“ Reinschlüpfen ohne Bücken, airhaag und neohaag.</li>
+            <li><b>Reel „Model-Wissen“:</b> „15 Jahre Model und das Wichtigste am Outfit war nie die Jacke.“</li>
+            <li><b>Januar-Challenge:</b> 30 Tage Training mit Community und Rabattcode, Abschluss mit Gewinnspiel.</li>
+          </ul></div>
+      </div>
+      <div class="rhythm rv">
+        <h3>Monatlicher Rhythmus ab Dezember (Paket RUN)</h3>
+        <div class="weeks">
+          <div><b>Woche 1</b><span>Reel aus dem Training</span><small>Stories: Behind the Scenes mit PT</small></div>
+          <div><b>Woche 2</b><span>Stories aus dem Studio</span><small>Making-of vom E-Commerce-Shooting</small></div>
+          <div><b>Woche 3</b><span>Reel Lifestyle oder Story</span><small>Outfit, Alltag, Reise</small></div>
+          <div><b>Woche 4</b><span>Stories mit Code</span><small>Q&amp;A, Umfrage, Reporting an euch</small></div>
+        </div>
+        <p class="note">Hooks sind Aussagen, keine Werbesprüche. Jede Story-Sequenz hat Link-Sticker und Rabattcode. Alle Posts sind als Werbung gekennzeichnet.</p>
+      </div>
+    </div>
+
+    <div class="tpanel" id="t-train" hidden>
+      <div class="split">
+        <figure class="split-img"><img src="img/trinity-941.webp" alt="Training mit Langhantel" loading="lazy" style="object-position:50% 35%"></figure>
+        <div>
+          <span class="eyebrow">Ein Termin pro Monat · ca. 2 Stunden</span>
+          <h3 class="ph">Trainings-Shooting mit meinem Personal Trainer</h3>
+          <p class="muted">Echtes Training, keine gestellte Pose. Mein Trainer bringt mich an die Grenze, die Kamera läuft mit. Gedreht wird mit Gimbal in 9:16 für Reels und 4:5 für den Feed.</p>
+          <ol class="shots">
+            <li><b>Reinschlüpfen:</b> Elastiksenkel und Zuglasche in Nahaufnahme, der Moment vor dem ersten Satz.</li>
+            <li><b>Box Jumps:</b> Zeitlupe auf die Landung, Dämpfung und Sohle im Fokus.</li>
+            <li><b>Ausfallschritte:</b> Kamera auf Bodenhöhe, Grip und Stabilität.</li>
+            <li><b>Seilspringen und Sprints:</b> schnelle Schnitte, leichter Schuh in Bewegung.</li>
+            <li><b>Trainer-Momente:</b> Ansagen, Korrekturen, der letzte Satz. Das macht es echt.</li>
+            <li><b>Schuhwechsel:</b> nach dem Training vom hyperhaag in den neohaag, raus aus dem Gym. Übergang für Reels.</li>
+          </ol>
+          <div class="deliver"><b>Ihr bekommt:</b> 1 fertiges Reel, 10 Clips Rohmaterial für euer Social-Team, 15 Fotos.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tpanel" id="t-camp" hidden>
+      <div class="concepts">
+        <article><span class="tag">Konzept 1</span><h3>Arena</h3><p>Sport im Amphitheater oder in urbaner Betonarchitektur, wie beim Shooting in Basel. Rot und Koralle im Outfit, Bewegung, Sprünge, Treppen.</p><small>hyperhaag · airhaag</small></article>
+        <article><span class="tag">Konzept 2</span><h3>Residenz</h3><p>Smart Casual vor dem Barockschloss in Rastatt. Sakko, Chino, weiße Sneaker. Zeigt: tenhaag geht auch zum Anzug.</p><small>winhaag · spirithaag</small></article>
+        <article><span class="tag">Konzept 3</span><h3>City Night</h3><p>Abends in der Stadt, Lichter, Bewegung, Hollywood-Stimmung zu Hause. Für Backstage-Look und Social-Ads.</p><small>neohaag schwarz</small></article>
+        <article><span class="tag">Konzept 4</span><h3>Saison</h3><p>Pro Saison ein Shooting zur neuen Kollektion, zum Beispiel Schwarzwald im Regen für die Waterproof-Modelle im Herbst.</p><small>nach eurer Kollektion</small></article>
+      </div>
+      <div class="deliver rv"><b>Pro Shooting:</b> Profi-Fotograf, ein Tag, 25 bearbeitete Bilder in 4:5, 9:16 und 16:9 für Startseite und Banner, mit Freiraum für Text. Moodboard und Shotlist stimmen wir vorher mit euch ab.</div>
+    </div>
+
+    <div class="tpanel" id="t-ecom" hidden>
+      <div class="split">
+        <div>
+          <span class="eyebrow">Ein Termin pro Monat · 1 bis 2 Modelle</span>
+          <h3 class="ph">E-Commerce-Studio bei mir um die Ecke</h3>
+          <p class="muted">Im Look eurer bestehenden Shop-Bilder: heller Hintergrund, Jogger oder Chino, weiße Socken. So passen die neuen Bilder direkt in den Shop.</p>
+          <div class="ecom">
+            <div><h4>Packshots, freigestellt</h4><ul><li>Außenseite</li><li>Innenseite</li><li>3/4 von vorn</li><li>Draufsicht</li><li>Sohle</li><li>Ferse</li><li>Paar</li><li>Material-Detail</li></ul></div>
+            <div><h4>On-Feet</h4><ul><li>Stand seitlich</li><li>Schritt in Bewegung</li><li>Reinschlüpfen ohne Bücken</li><li>Detail mit Hose am Knöchel</li></ul></div>
+          </div>
+          <div class="deliver"><b>Lieferung:</b> 8 freigestellte Bilder und 4 On-Feet-Shots pro Termin, 2000 × 2000 px, als JPG und PNG, benannt nach Artikelnummer. Fertig innerhalb von 5 Werktagen.</div>
+        </div>
+        <figure class="split-img"><img src="img/shoe-airhaag.webp" alt="airhaag Packshot" loading="lazy" style="object-fit:contain;padding:40px;background:#fff"></figure>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -642,6 +780,10 @@ reduce ? layout() : requestAnimationFrame(loop);
 document.querySelectorAll('.toggle button').forEach(b => b.addEventListener('click', () => {
   document.querySelectorAll('.toggle button').forEach(x => x.setAttribute('aria-pressed', x === b));
   document.getElementById('packs').classList.toggle('show-year', b.dataset.v === 'y');
+}));
+document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.tabs button').forEach(x => x.setAttribute('aria-selected', x === b));
+  document.querySelectorAll('.tpanel').forEach(p => p.hidden = p.id !== b.dataset.t);
 }));
 </script>
 </body>
