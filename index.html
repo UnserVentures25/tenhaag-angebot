@@ -37,6 +37,7 @@ p{text-wrap:pretty}
 .brand{display:flex;align-items:center;gap:14px;font-weight:700;font-size:15px;text-decoration:none}
 .brand img{height:26px;width:auto}
 .brand .x{color:var(--coral);font-weight:800}
+.brand img.sig{height:42px;filter:brightness(0)}
 .nav nav{display:flex;gap:26px;font-size:15px;font-weight:600}
 .nav nav a{text-decoration:none;opacity:.75}
 .nav nav a:hover{opacity:1}
@@ -160,7 +161,7 @@ section{padding:120px 0}
 .letter .big{font-size:clamp(30px,4vw,50px);font-weight:800;line-height:1.08;letter-spacing:-.02em;margin:16px 0 28px;text-wrap:balance}
 .letter p{font-size:19px;color:#d4d7da;line-height:1.65}
 .letter em{color:var(--coral-soft);font-style:normal;font-weight:800}
-.letter .sign{font-size:34px;font-weight:900;color:#fff;margin-top:30px;transform:rotate(-3deg);display:inline-block}
+.letter .sign{width:min(360px,80%);margin-top:34px}
 
 /* Langfristig */
 .long{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
@@ -264,7 +265,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
 <header class="nav" id="nav">
   <div class="wrap">
-    <a class="brand" href="#top"><img src="img/logo-tenhaag.svg" alt="tenhaag"><span class="x">×</span><span>Yves Unser</span></a>
+    <a class="brand" href="#top"><img src="img/logo-tenhaag.svg" alt="tenhaag"><span class="x">×</span><img class="sig" src="img/unterschrift.png" alt="Yves-Len Unser"></a>
     <nav><a href="#story">Story</a><a href="#weg">Mein Weg</a><a href="#schuhe">Schuhe</a><a href="#leistungen">Leistungen</a><a href="#pakete">Pakete</a><a href="#marktwert">Marktwert</a><a href="#kontakt">Kontakt</a></nav>
   </div>
 </header>
@@ -279,7 +280,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <div class="cta-row"><a class="btn" href="#pakete">Pakete ansehen →</a><a class="btn ghost" href="#kontakt">Direkt sprechen</a></div>
     </div>
     <div class="stage" id="stage">
-      <img class="photo" src="img/yves-training.webp" alt="Yves Unser in Sportkleidung vor rotem Hintergrund">
+      <img class="photo" src="img/trinity-101.webp" alt="Yves Unser im Training">
       <div class="label">Mister Universe 2026<b>Platz 4</b><span>von 55 im Weltvoting</span></div>
       <div class="shoe-wrap" id="shoe"><img class="shoe" src="img/shoe-hyperhaag.webp" alt="tenhaag hyperhaag"><div class="shadow"></div></div>
     </div>
@@ -315,8 +316,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     <p class="big">Ich habe gelernt, was es heißt, ganz oben und ganz unten zu stehen.</p>
     <p>Vom Mechatroniker bei Mercedes zum Model, allein nach Los Angeles, Fashion Weeks in New York und LA, Kampagnen für große Marken. Dann eine eigene Firma, zwei Töchter, alles auf eine Karte gesetzt, und eine Insolvenz, nach der nichts mehr übrig war. Außer meiner Familie. Und dem Wort, das mir mein Opa Velimir mitgegeben hat: <em>inat</em>. Trotz. Weitermachen, gerade dann.</p>
     <p>Mein Opa ist dieses Jahr gestorben. Bei einem meiner letzten Besuche habe ich ihm ein serbisches Trikot mit seinem Namen ans Bett gebracht. Nach dem Abschied habe ich gesagt: „Jetzt hole ich den Titel umso mehr. Für Serbien. Für meinen Opa.“ Am 29. November ist es so weit.</p>
-    <p>Ich will keinen Werbedeal, der nach einem Monat vergessen ist. Ich will eine Marke an meiner Seite, die diesen Weg mitgeht. Vom Leg Day in Rastatt über die Bühne in Hollywood bis zu dem Tag, an dem meine Töchter mich fragen, welche Schuhe ich damals getragen habe.</p>
-    <p class="sign">Yves</p>
+    <p>Ich will keinen Werbedeal, der nach einem Monat vergessen ist. Ich will eine Marke an meiner Seite, die diesen Weg mitgeht: vom Training zu Hause bis auf die Bühne in Hollywood, und darüber hinaus.</p>
+    <img class="sign" src="img/unterschrift.png" alt="Unterschrift Yves-Len Unser">
   </div>
 </section>
 
@@ -349,8 +350,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   <div class="wrap long">
     <div class="rv">
       <span class="eyebrow">Langfristig gedacht</span>
-      <h2>Eine Marke, mit der ich alt werden will.</h2>
-      <p>Ich suche keinen Deal für einen Monat. Ich suche einen Schuh, den ich in zehn Jahren noch trage, und eine Marke, die mit mir wächst: vom Hollywood-Finale über das nächste Buch bis zum Spielplatz mit meinen Töchtern.</p>
+      <h2>Eine Marke. Langfristig.</h2>
+      <p>Ich suche keinen Deal für einen Monat, sondern einen Partner, mit dem ich über Jahre wachse: vom Hollywood-Finale über Training und Coaching bis zu den nächsten großen Projekten.</p>
       <ul class="vows">
         <li>Ich trage tenhaag, auch wenn keine Kamera läuft. Nur so wirkt es echt.</li>
         <li>Keine andere Schuhmarke auf meinen Kanälen, solange wir Partner sind.</li>
@@ -358,7 +359,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
         <li>Ehrliches Feedback zu euren Modellen. Wenn mir etwas auffällt, sage ich es euch zuerst.</li>
       </ul>
     </div>
-    <div class="long-img rv"><img src="img/yves-buehne.webp" alt="Yves Unser auf der Bühne" loading="lazy"></div>
+    <div class="long-img rv"><img src="img/trinity-885.webp" alt="Yves Unser mit Trainingsseil" loading="lazy"></div>
   </div>
 </section>
 
@@ -373,7 +374,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
           <p>Ich trainiere fest mit meinem Personal Trainer. Jede Session ist ein echter Härtetest für eure Trainingsschuhe und liefert ehrlichen Content statt gestellter Posen.</p>
           <ul><li>hyperhaag, airhaag und strikehaag im Einsatz</li><li>Close-ups von Grip, Dämpfung, Easy Access</li><li>Rohmaterial für euer eigenes Social-Team</li></ul>
         </div>
-        <img src="img/yves-training.webp" alt="Yves im Training" loading="lazy" style="object-position:50% 70%">
+        <img src="img/trinity-941.webp" alt="Yves beim Training mit der Langhantel" loading="lazy" style="object-position:50% 30%">
       </article>
       <article class="svc tilt rv">
         <span class="num">02</span>
@@ -572,7 +573,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 </section>
 </main>
 
-<footer><div class="wrap"><span>Angebot für tenhaag · Yves Unser · Stand 2. November 2026, Voting-Platz 4 von 55 · gültig bis 30. November 2026 · alle Preise netto zzgl. gesetzlicher MwSt.</span><span>Produktbilder: tenhaag</span></div></footer>
+<footer><div class="wrap"><img src="img/unterschrift.png" alt="Yves-Len Unser" style="height:30px;filter:brightness(0);opacity:.7"><span>Angebot für tenhaag · Yves Unser · Stand 2. November 2026, Voting-Platz 4 von 55 · gültig bis 30. November 2026 · alle Preise netto zzgl. gesetzlicher MwSt.</span><span>Produktbilder: tenhaag</span></div></footer>
 
 <script>
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
