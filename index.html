@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>tenhaag × Yves Unser · Partnerschaftsangebot</title>
+<meta name="description" content="Partnerschaftsangebot von Yves Unser für tenhaag: Training, E-Commerce-Studio, Kampagnen-Shootings, Social Media und Hollywood-Kick-off.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#191918;--ink-2:#3c3c3b;--slate:#4a545b;--mute:#7b8187;--line:#e6e5e3;
+  --paper:#ffffff;--stone:#f5f5f4;--coral:#e0525e;--coral-soft:#db7070;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.55 Figtree,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+h1,h2,h3{margin:0;font-weight:800;letter-spacing:-.02em;line-height:1.02;text-wrap:balance}
+p{text-wrap:pretty}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink-2);color:#fff;text-decoration:none;font-weight:700;padding:16px 26px;border-radius:0;transition:transform .25s var(--ease),background .25s}
+.btn:hover{background:var(--ink);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;background:var(--stone);color:var(--slate)}
+
+/* Nav */
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s}
+.nav.solid{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:14px;font-weight:700;font-size:15px;text-decoration:none}
+.brand img{height:26px;width:auto}
+.brand .x{color:var(--coral);font-weight:800}
+.nav nav{display:flex;gap:26px;font-size:15px;font-weight:600}
+.nav nav a{text-decoration:none;opacity:.75}
+.nav nav a:hover{opacity:1}
+@media (max-width:820px){.nav nav{display:none}}
+
+/* Hero */
+.hero{position:relative;min-height:100svh;display:grid;align-items:center;padding:110px 0 60px;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-12vw;top:-10vw;width:62vw;height:62vw;border-radius:50%;background:radial-gradient(circle at 40% 40%,#fbe4e6 0,#fff 62%);z-index:-1}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(44px,6vw,86px)}
+.hero h1 .c{color:var(--coral)}
+.hero .lead{font-size:clamp(18px,1.7vw,21px);color:var(--slate);max-width:560px;margin:26px 0 34px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.stage{position:relative;height:min(76vh,680px);perspective:1400px}
+.stage .photo{position:absolute;right:4%;top:0;width:58%;height:88%;object-fit:cover;object-position:50% 20%;transform:rotateY(-14deg) rotateX(3deg);transform-origin:right center;box-shadow:40px 50px 80px -30px rgba(25,25,24,.45);transition:transform .2s linear}
+.stage .shoe-wrap{position:absolute;left:-4%;bottom:6%;width:78%;transform-style:preserve-3d;transition:transform .15s linear}
+.stage .shoe{width:100%;filter:drop-shadow(0 40px 30px rgba(25,25,24,.28));animation:float 6s ease-in-out infinite}
+.stage .shadow{position:absolute;left:8%;right:8%;bottom:-22px;height:30px;border-radius:50%;background:radial-gradient(closest-side,rgba(25,25,24,.28),transparent);animation:shadow 6s ease-in-out infinite}
+.stage .label{position:absolute;left:2%;top:8%;background:var(--ink);color:#fff;padding:14px 16px;font-weight:800;font-size:14px;letter-spacing:.04em;transform:translateZ(60px)}
+.stage .label b{display:block;font-size:30px;letter-spacing:-.02em}
+.stage .label span{color:var(--coral-soft)}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-18px) rotate(-1deg)}}
+@keyframes shadow{0%,100%{transform:scaleX(1);opacity:1}50%{transform:scaleX(.82);opacity:.6}}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.stage{height:min(110vw,560px)}}
+
+/* Marquee */
+.marquee{background:var(--ink);color:#fff;overflow:hidden;padding:18px 0;border-block:1px solid #000}
+.marquee .track{display:flex;gap:48px;width:max-content;animation:mq 32s linear infinite;font-weight:800;font-size:clamp(20px,2.4vw,30px);letter-spacing:-.01em;white-space:nowrap}
+.marquee .track span:nth-child(even){color:var(--coral)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:120px 0}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
+.sec-head h2{font-size:clamp(36px,5vw,64px)}
+.sec-head p{color:var(--slate);font-size:19px;margin:0}
+@media (max-width:820px){.sec-head{grid-template-columns:1fr}section{padding:84px 0}}
+
+/* Story */
+.story{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.story-img{position:relative;aspect-ratio:4/5;overflow:hidden}
+.story-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 1.2s var(--ease)}
+.story-img.in img{transform:scale(1)}
+.story-img .sash{position:absolute;left:0;bottom:0;background:var(--coral);color:#fff;padding:12px 18px;font-weight:800;font-size:15px}
+.story h2{font-size:clamp(34px,4.4vw,56px);margin:14px 0 22px}
+.story p{color:var(--slate);font-size:18px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);margin-top:34px;border:1px solid var(--line)}
+.stat{background:#fff;padding:22px}
+.stat b{display:block;font-size:clamp(30px,3.4vw,44px);font-weight:900;letter-spacing:-.03em}
+.stat small{color:var(--mute);font-size:14px}
+@media (max-width:900px){.story{grid-template-columns:1fr}}
+
+/* Leistungen */
+.services{background:var(--stone)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;perspective:1600px}
+.svc{position:relative;background:#fff;padding:30px 28px 28px;min-height:330px;display:flex;flex-direction:column;transform-style:preserve-3d;transition:transform .35s var(--ease),box-shadow .35s;box-shadow:0 1px 0 var(--line)}
+.svc:hover{box-shadow:0 30px 60px -30px rgba(25,25,24,.35)}
+.svc .num{font-size:14px;font-weight:800;color:var(--coral);transform:translateZ(30px)}
+.svc h3{font-size:25px;margin:16px 0 12px;transform:translateZ(40px)}
+.svc p{color:var(--slate);font-size:16px;margin:0 0 18px;transform:translateZ(20px)}
+.svc ul{margin:auto 0 0;padding:0;list-style:none;font-size:15px;font-weight:600;transform:translateZ(25px)}
+.svc li{padding:8px 0;border-top:1px solid var(--line);display:flex;gap:10px}
+.svc li::before{content:"";flex:0 0 8px;height:8px;margin-top:8px;background:var(--coral)}
+.svc.feature{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:0;overflow:hidden}
+.svc.feature .txt{padding:30px 28px;display:flex;flex-direction:column}
+.svc.feature img{width:100%;height:100%;object-fit:cover}
+@media (max-width:980px){.svc-grid{grid-template-columns:1fr 1fr}.svc.feature{grid-column:span 2}}
+@media (max-width:640px){.svc-grid{grid-template-columns:1fr}.svc.feature{grid-column:auto;grid-template-columns:1fr}.svc.feature img{aspect-ratio:4/3}}
+
+/* Schuh-Ring */
+.ring-sec{background:var(--ink);color:#fff;overflow:hidden}
+.ring-sec .sec-head p{color:#b9bdc1}
+.ring{position:relative;height:440px;perspective:1300px}
+.ring .spin{position:absolute;left:50%;top:44%;width:0;height:0;transform-style:preserve-3d}
+.ring .item{position:absolute;width:300px;left:-150px;top:-90px;transform-style:preserve-3d}
+.ring .item img{width:100%;filter:drop-shadow(0 30px 24px rgba(0,0,0,.55))}
+.ring .item span{display:block;text-align:center;margin-top:16px;font-weight:800;font-size:18px;transition:opacity .3s}
+.ring .item span em{font-style:normal;color:var(--coral-soft)}
+.ring .floor{position:absolute;left:50%;top:70%;width:760px;height:760px;margin-left:-380px;border-radius:50%;transform:rotateX(78deg);background:radial-gradient(closest-side,rgba(224,82,94,.35),transparent 70%)}
+@media (max-width:640px){.ring .item{width:200px;left:-100px}.ring{height:360px}}
+
+.picks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px;perspective:1600px}
+.pick{display:flex;flex-direction:column;background:#232322;color:#fff;text-decoration:none;padding:22px;transition:transform .35s var(--ease),background .3s}
+.pick:hover{background:#2c2c2b}
+.pick-img{height:150px;display:grid;place-items:center;margin-bottom:14px}
+.pick-img img{max-height:130px;width:auto;filter:drop-shadow(0 18px 14px rgba(0,0,0,.5));transition:transform .5s var(--ease)}
+.pick:hover .pick-img img{transform:rotate(-6deg) scale(1.06)}
+.pick .tag{align-self:flex-start;background:var(--coral);color:#fff}
+.pick h3{font-size:24px;margin:12px 0 8px}
+.pick h3 small{font-size:15px;font-weight:600;color:#9da2a7}
+.pick p{color:#c4c8cc;font-size:15px;margin:0 0 14px}
+.pick .pr{margin-top:auto;font-weight:700;font-size:14px;color:var(--coral-soft)}
+.size{margin:30px 0 0;color:#c4c8cc;font-size:16px}
+.size b{color:#fff}
+@media (max-width:900px){.picks{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.picks{grid-template-columns:1fr}}
+
+/* Weg */
+.path{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.path-photo{grid-column:span 2;position:relative;overflow:hidden;min-height:280px}
+.path-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.path-photo figcaption{position:absolute;left:0;bottom:0;background:var(--ink);color:#fff;font-size:14px;font-weight:700;padding:10px 14px}
+.mile{background:#fff;border-top:3px solid var(--ink);padding:20px 20px 22px}
+.mile .when{font-size:13px;font-weight:800;letter-spacing:.1em;color:var(--coral)}
+.mile h3{font-size:20px;margin:8px 0}
+.mile p{margin:0;color:var(--slate);font-size:15px}
+.quote{grid-column:span 2;background:var(--coral);color:#fff;padding:30px;display:flex;flex-direction:column;justify-content:center}
+.quote blockquote{margin:0;font-size:clamp(22px,2.4vw,30px);font-weight:800;line-height:1.2;letter-spacing:-.01em}
+.quote cite{margin-top:14px;font-style:normal;font-size:14px;opacity:.9}
+.books{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.book{background:var(--ink);color:#fff;padding:26px;display:grid;grid-template-columns:70px 1fr;gap:18px;align-items:center}
+.book .cover{height:96px;background:linear-gradient(135deg,var(--coral),#8c2f37);box-shadow:6px 8px 0 #000;display:grid;place-items:center;font-weight:900;font-size:12px;text-align:center;padding:6px;line-height:1.1}
+.book h3{font-size:21px;margin-bottom:6px}
+.book p{margin:0;color:#c4c8cc;font-size:15px}
+@media (max-width:900px){.path{grid-template-columns:1fr 1fr}.books{grid-template-columns:1fr}}
+@media (max-width:560px){.path{grid-template-columns:1fr}.path-photo,.quote{grid-column:auto}}
+
+/* Langfristig */
+.long{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.long h2{font-size:clamp(36px,5vw,64px);margin:14px 0 22px}
+.long p{color:var(--slate);font-size:18px}
+.vows{list-style:none;margin:26px 0 0;padding:0;counter-reset:v}
+.vows li{counter-increment:v;display:grid;grid-template-columns:44px 1fr;gap:12px;padding:16px 0;border-top:1px solid var(--line);font-size:17px}
+.vows li::before{content:counter(v,decimal-leading-zero);font-weight:900;color:var(--coral)}
+.long-img{position:relative;aspect-ratio:2/3;overflow:hidden}
+.long-img img{width:100%;height:100%;object-fit:cover}
+@media (max-width:900px){.long{grid-template-columns:1fr}}
+
+/* Pakete */
+.toggle{display:inline-flex;background:var(--stone);padding:4px;margin-bottom:40px}
+.toggle button{border:0;background:transparent;font:inherit;font-weight:700;font-size:15px;padding:10px 18px;cursor:pointer;color:var(--slate)}
+.toggle button[aria-pressed=true]{background:var(--ink);color:#fff}
+.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch;perspective:1800px}
+.pack{position:relative;border:1.5px solid var(--line);padding:34px 28px 30px;display:flex;flex-direction:column;background:#fff;transition:transform .35s var(--ease),box-shadow .35s,border-color .35s;transform-style:preserve-3d}
+.pack:hover{border-color:var(--ink)}
+.pack.top{background:var(--ink);color:#fff;border-color:var(--ink);transform:translateY(-16px);box-shadow:0 40px 80px -36px rgba(25,25,24,.6)}
+.pack .badge{position:absolute;top:-14px;left:28px;background:var(--coral);color:#fff;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:7px 12px}
+.pack h3{font-size:34px}
+.pack h3 small{display:block;font-size:14px;font-weight:600;letter-spacing:0;color:var(--mute);margin-top:6px}
+.pack.top h3 small{color:#b9bdc1}
+.price{margin:26px 0 6px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.price b{font-size:52px;font-weight:900;letter-spacing:-.04em;line-height:1}
+.price>span{font-size:15px;color:var(--mute)}
+.pack.top .price>span{color:#b9bdc1}
+.was{font-size:15px;color:var(--mute)}
+.was s{text-decoration-color:var(--coral);text-decoration-thickness:2px}
+.pack.top .was{color:#b9bdc1}
+.save{display:inline-block;margin-top:10px;font-size:13px;font-weight:800;color:var(--coral)}
+.pack ul{list-style:none;margin:26px 0 0;padding:0;font-size:15.5px}
+.pack li{padding:10px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:22px 1fr;gap:8px}
+.pack.top li{border-color:#333}
+.pack li::before{content:"✓";font-weight:900;color:var(--coral)}
+.pack .foot{margin-top:auto;padding-top:26px;font-size:14px;color:var(--mute)}
+.pack.top .foot{color:#b9bdc1}
+.year{display:none}
+.show-year .year{display:inline}.show-year .month{display:none}
+@media (max-width:980px){.packs{grid-template-columns:1fr}.pack.top{transform:none}}
+
+/* Kickoff */
+.kick{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--stone);margin-top:70px;overflow:hidden}
+.kick img{width:100%;height:100%;object-fit:cover;min-height:340px}
+.kick .txt{padding:44px 40px}
+.kick h3{font-size:clamp(30px,3.4vw,42px);margin:12px 0 16px}
+.kick p{color:var(--slate);margin:0 0 14px}
+.kick .price b{font-size:44px}
+@media (max-width:820px){.kick{grid-template-columns:1fr}.kick .txt{padding:32px 24px}}
+
+/* Marktwert */
+.table{width:100%;border-collapse:collapse;font-size:16px}
+.table th,.table td{text-align:left;padding:16px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.table th{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);font-weight:700}
+.table td:last-child,.table th:last-child{text-align:right;white-space:nowrap;font-weight:700}
+.table td small{display:block;color:var(--mute);font-size:14px}
+.bar{height:10px;background:var(--stone);margin-top:10px;position:relative;overflow:hidden}
+.bar i{position:absolute;inset:0 auto 0 0;background:var(--coral);width:0;transition:width 1.4s var(--ease)}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.compare>div{padding:26px;border:1.5px solid var(--line)}
+.compare>div:last-child{background:var(--ink);color:#fff;border-color:var(--ink)}
+.compare b{display:block;font-size:clamp(34px,4vw,50px);font-weight:900;letter-spacing:-.03em}
+@media (max-width:640px){.compare{grid-template-columns:1fr}.table th:nth-child(2),.table td:nth-child(2){display:none}}
+
+/* Timeline */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{border-top:3px solid var(--ink);padding-top:20px}
+.step .when{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--coral)}
+.step h3{font-size:22px;margin:10px 0}
+.step p{color:var(--slate);font-size:15.5px;margin:0}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* Konditionen */
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.terms div{background:var(--stone);padding:28px}
+.terms h3{font-size:20px;margin-bottom:12px}
+.terms ul{margin:0;padding-left:18px;color:var(--slate);font-size:15.5px}
+.terms li{margin:6px 0}
+@media (max-width:820px){.terms{grid-template-columns:1fr}}
+
+/* CTA */
+.cta{background:var(--coral);color:#fff;text-align:center;padding:110px 0}
+.cta h2{font-size:clamp(40px,6vw,84px)}
+.cta p{font-size:20px;max-width:640px;margin:22px auto 34px;opacity:.95}
+.cta .btn{background:#fff;color:var(--ink)}
+.cta .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px #fff}
+.cta .cta-row{justify-content:center}
+footer{padding:30px 0;font-size:14px;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media print{.nav,.marquee,.ring-sec{display:none}.rv{opacity:1;transform:none}section{padding:40px 0}.hero{min-height:auto}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="img/logo-tenhaag.svg" alt="tenhaag"><span class="x">×</span><span>Yves Unser</span></a>
+    <nav><a href="#story">Story</a><a href="#weg">Mein Weg</a><a href="#schuhe">Schuhe</a><a href="#leistungen">Leistungen</a><a href="#pakete">Pakete</a><a href="#marktwert">Marktwert</a><a href="#kontakt">Kontakt</a></nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="meta"><span class="tag">Partnerschaftsangebot</span><span class="tag">für tenhaag</span><span class="tag">ab Nov. 2026</span></div>
+      <h1>zero haags given.<br><span class="c">Auch nicht in Hollywood.</span></h1>
+      <p class="lead">Ich trage tenhaag im Training, im Studio, vor der Kamera und auf dem Weg ins Finale von Mister Universe. Eine langfristige Partnerschaft mit echter Geschichte und mit Content, den ihr direkt im Shop und auf Social nutzen könnt.</p>
+      <div class="cta-row"><a class="btn" href="#pakete">Pakete ansehen →</a><a class="btn ghost" href="#kontakt">Direkt sprechen</a></div>
+    </div>
+    <div class="stage" id="stage">
+      <img class="photo" src="img/yves-training.webp" alt="Yves Unser in Sportkleidung vor rotem Hintergrund">
+      <div class="label">Mister Universe 2026<b>Platz 4</b><span>von 55 im Weltvoting</span></div>
+      <div class="shoe-wrap" id="shoe"><img class="shoe" src="img/shoe-hyperhaag.webp" alt="tenhaag hyperhaag"><div class="shadow"></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>hyperhaag</span><span>im Gym</span><span>strikehaag</span><span>im Studio</span><span>stormhaag WP</span><span>in Los Angeles</span><span>neohaag</span><span>zero haags given</span>
+  <span>hyperhaag</span><span>im Gym</span><span>strikehaag</span><span>im Studio</span><span>stormhaag WP</span><span>in Los Angeles</span><span>neohaag</span><span>zero haags given</span>
+</div></div>
+
+<section id="story">
+  <div class="wrap story">
+    <div class="story-img rv"><img src="img/yves-face-of-europe.webp" alt="Yves Unser auf der Bühne mit Schärpe"><div class="sash">Für Serbien. Für meinen Opa.</div></div>
+    <div class="rv">
+      <span class="eyebrow">Warum ich</span>
+      <h2>Eine Geschichte, die Leute mitlaufen lässt.</h2>
+      <p>Ich bin in Rastatt geboren und vertrete Serbien, die Heimat meiner Mutter, beim Mister Universe 2026. Das Finale ist am 29. November in den Universal Studios Hollywood. Ich widme es meinem Opa Velimir, der dieses Jahr gestorben ist.</p>
+      <p>Davor: Ausbildung bei Mercedes-Benz, Fallschirmjäger, über 15 Jahre Model für Zalando, About You, Otto und Thomas Sabo, Finalist bei SAT.1 „The Mole“. Heute Coach und Vater von zwei Töchtern. Genau die Zielgruppe, die einen Schuh sucht, der alles mitmacht.</p>
+      <div class="stats">
+        <div class="stat"><b data-count="107">0</b><small>Tsd. Follower auf Instagram (@yvesunser)</small></div>
+        <div class="stat"><b data-count="440">0</b><small>Tsd. Aufrufe in 12 Monaten</small></div>
+        <div class="stat"><b data-count="15" data-suffix="+">0</b><small>Jahre internationales Model</small></div>
+        <div class="stat"><b>Platz 4</b><small>von 55 im Mister-Universe-Weltvoting</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="weg" style="background:var(--stone)">
+  <div class="wrap">
+    <div class="sec-head rv"><h2>Mein Weg in Schritten.</h2><p>Kein gerader Weg, aber einer, der immer weiterging. Genau darum passt ein Schuh zu mir, der alles mitmacht.</p></div>
+    <div class="path">
+      <div class="quote rv"><blockquote>„Die anderen hatten Gameboys. Neue Turnschuhe. Ich hatte braune Äpfel aus dem Garten.“</blockquote><cite>Aus meinem Buch „Vom Model zum Unternehmer“, Kapitel 1</cite></div>
+      <figure class="path-photo rv" style="margin:0"><img src="img/yves-kind.webp" alt="Yves als Kind auf einem Motorrad" loading="lazy"><figcaption>Ich als Kind</figcaption></figure>
+      <div class="mile rv"><span class="when">2008–2010</span><h3>Fallschirmjäger</h3><p>Grundwehrdienst bei den Fallschirmjägern in Zweibrücken. Disziplin, die bis heute bleibt.</p></div>
+      <div class="mile rv"><span class="when">2010–2014</span><h3>Mercedes-Benz Rastatt</h3><p>Ausbildung zum Mechatroniker im Werk Rastatt. Danach Fachhochschulreife in Ettlingen.</p></div>
+      <div class="mile rv"><span class="when">Seit 2014</span><h3>Internationales Model</h3><p>EastWest Models, Time Models Zürich, Zone Models London, Ave Management Singapur, Pure Management Los Angeles. Kampagnen für Zalando, About You, Otto, Thomas Sabo.</p></div>
+      <div class="mile rv"><span class="when">2015–2016</span><h3>Mister Baden-Württemberg</h3><p>Und Platz 4 bei Mister Germany 2015.</p></div>
+      <figure class="path-photo rv" style="margin:0"><img src="img/yves-model.webp" alt="Yves Unser im Anzug" loading="lazy" style="object-position:50% 30%"><figcaption>Model seit 2014</figcaption></figure>
+      <div class="mile rv"><span class="when">2017–2019</span><h3>Laufstege</h3><p>Berlin Fashion Week für Sarah Kern, Los Angeles Fashion Week, adidas WM-Show, New York Fashion Week.</p></div>
+      <div class="mile rv"><span class="when">2015–2020</span><h3>TV</h3><p>RTL 2 „Deutschlands gesündeste WG“, RTL „Falscher Hase“, Kanal Avrupa (Türkei), RTL Punkt 12. 2020 Finalist bei SAT.1 „The Mole“.</p></div>
+      <div class="mile rv"><span class="when">Seit 2014</span><h3>Coach</h3><p>Fitness- und Ernährungscoach, „90 Tage Wunschgewicht“, Gründer der YourCoaching GmbH. Heute Coaching für Körper, Geist und Seele.</p></div>
+      <div class="mile rv"><span class="when">2020–2024</span><h3>Vater und Gründer</h3><p>Zwei Töchter, eine eigene Software-Firma, die Insolvenz und der Neuanfang. Die härteste und wichtigste Zeit.</p></div>
+      <div class="mile rv"><span class="when">2025</span><h3>Face of Europe</h3><p>Sieger bei Face of Europe.</p></div>
+      <div class="mile rv"><span class="when">2026</span><h3>Mister Universe</h3><p>Für Serbien, Platz 4 von 55 im Weltvoting. Finale am 29. November in Hollywood.</p></div>
+    </div>
+    <div class="books">
+      <div class="book rv"><div class="cover">VOM MODEL ZUM UNTER­NEHMER</div><div><h3>Vom Model zum Unternehmer</h3><p>Mein Buch in 17 Kapiteln, auf Deutsch und Englisch. Erfolge, Abstürze und Neuanfänge, ehrlich erzählt.</p></div></div>
+      <div class="book rv"><div class="cover">THE RISER</div><div><h3>The Riser</h3><p>Mein zweites Buch mit der M.O.D.E.L.³-Methode für alle, die nach einem Rückschlag wieder aufstehen wollen.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="langfristig">
+  <div class="wrap long">
+    <div class="rv">
+      <span class="eyebrow">Langfristig gedacht</span>
+      <h2>Eine Marke, mit der ich alt werden will.</h2>
+      <p>Ich suche keinen Deal für einen Monat. Ich suche einen Schuh, den ich in zehn Jahren noch trage, und eine Marke, die mit mir wächst: vom Hollywood-Finale über das nächste Buch bis zum Spielplatz mit meinen Töchtern.</p>
+      <ul class="vows">
+        <li>Ich trage tenhaag, auch wenn keine Kamera läuft. Nur so wirkt es echt.</li>
+        <li>Keine andere Schuhmarke auf meinen Kanälen, solange wir Partner sind.</li>
+        <li>Ich denke in Jahren: 12 Monate als Start, danach gern 24 Monate mit festen Konditionen.</li>
+        <li>Ehrliches Feedback zu euren Modellen. Wenn mir etwas auffällt, sage ich es euch zuerst.</li>
+      </ul>
+    </div>
+    <div class="long-img rv"><img src="img/yves-buehne.webp" alt="Yves Unser auf der Bühne" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="services" id="leistungen">
+  <div class="wrap">
+    <div class="sec-head rv"><h2>Alles aus einer Hand.</h2><p>Model, Content und Produktion. Ihr bekommt Bilder und Videos, die ihr im Shop, auf Social, im Newsletter und in Ads nutzen könnt.</p></div>
+    <div class="svc-grid">
+      <article class="svc feature tilt rv">
+        <div class="txt">
+          <span class="num">01</span>
+          <h3>Training mit Personal Trainer</h3>
+          <p>Ich trainiere fest mit meinem Personal Trainer. Jede Session ist ein echter Härtetest für eure Trainingsschuhe und liefert ehrlichen Content statt gestellter Posen.</p>
+          <ul><li>hyperhaag, airhaag und strikehaag im Einsatz</li><li>Close-ups von Grip, Dämpfung, Easy Access</li><li>Rohmaterial für euer eigenes Social-Team</li></ul>
+        </div>
+        <img src="img/yves-training.webp" alt="Yves im Training" loading="lazy" style="object-position:50% 70%">
+      </article>
+      <article class="svc tilt rv">
+        <span class="num">02</span>
+        <h3>E-Commerce-Studio</h3>
+        <p>Ein E-Commerce-Studio bei mir um die Ecke, mit dem ich eng zusammenarbeite. Produktbilder und On-Feet-Shots in Shop-Qualität, schnell und planbar.</p>
+        <ul><li>Freigestellte Produktbilder</li><li>On-Feet und Detailshots</li><li>Shop-fertig retuschiert</li></ul>
+      </article>
+      <article class="svc tilt rv">
+        <span class="num">03</span>
+        <h3>Kampagnen-Shootings</h3>
+        <p>Mit professionellen Fotografen aus meinem Netzwerk. Lifestyle- und Kampagnenbilder für Startseite, Banner und Saisonstart.</p>
+        <ul><li>15 Jahre Erfahrung vor der Kamera</li><li>Urban, Outdoor, Studio</li><li>Saisonale Kollektionen</li></ul>
+      </article>
+      <article class="svc tilt rv">
+        <span class="num">04</span>
+        <h3>Social Media</h3>
+        <p>Reels, Story-Sequenzen und ein eigener Highlight-Bereich „tenhaag“ auf meinem Profil, dauerhaft sichtbar.</p>
+        <ul><li>Reels mit Hook und Schnitt</li><li>Stories mit Link und Rabattcode</li><li>Highlight „tenhaag“</li></ul>
+      </article>
+      <article class="svc tilt rv">
+        <span class="num">05</span>
+        <h3>Nutzungsrechte und Reporting</h3>
+        <p>Ihr dürft den Content selbst einsetzen. Jeden Monat bekommt ihr ein kurzes Reporting mit Reichweite, Klicks und Code-Umsätzen.</p>
+        <ul><li>Shop, Social, Newsletter</li><li>Optional Ads-Freigabe</li><li>Monatliches Reporting</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="ring-sec" id="schuhe" aria-label="Meine Auswahl">
+  <div class="wrap">
+    <div class="sec-head rv"><h2>Meine sechs.<br>Ich konnte mich nicht entscheiden.</h2><p>Ich habe mich durch euren Shop geklickt und bei jedem Modell gedacht: den auch. Ich bin kein Schuh-Experte, aber ich weiß, wofür ich sie brauche. Hier ist meine Auswahl, und für jede Szene in meinem Leben gibt es einen.</p></div>
+  </div>
+  <div class="ring" id="ring">
+    <div class="floor"></div>
+    <div class="spin" id="spin">
+      <div class="item"><img src="img/shoe-hyperhaag.webp" alt="hyperhaag" loading="lazy"><span><em>hyper</em>haag · Gym</span></div>
+      <div class="item"><img src="img/shoe-airhaag.webp" alt="airhaag" loading="lazy"><span><em>air</em>haag · Reise</span></div>
+      <div class="item"><img src="img/shoe-winhaag.webp" alt="winhaag" loading="lazy"><span><em>win</em>haag · Smart</span></div>
+      <div class="item"><img src="img/shoe-neohaag-schwarz.webp" alt="neohaag" loading="lazy"><span><em>neo</em>haag · City</span></div>
+      <div class="item"><img src="img/shoe-spirithaag.webp" alt="spirithaag" loading="lazy"><span><em>spirit</em>haag · Coaching</span></div>
+      <div class="item"><img src="img/shoe-gridhaag.webp" alt="gridhaag" loading="lazy"><span><em>grid</em>haag · Alltag</span></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="picks">
+      <a class="pick tilt rv" href="https://www.tenhaag-shop.de/p/sneaker-gruen-hyperhaag-1430090047/" target="_blank" rel="noopener"><div class="pick-img"><img src="img/shoe-hyperhaag.webp" alt="hyperhaag grün" loading="lazy"></div><span class="tag">Gym</span><h3>hyperhaag <small>grün</small></h3><p>Training mit meinem Personal Trainer. Elastiksenkel, Dämpfung, Grip: genau das, was ein Leg Day braucht.</p><span class="pr">149,90 € im Shop →</span></a>
+      <a class="pick tilt rv" href="https://www.tenhaag-shop.de/p/sneaker-weiss-airhaag-1421090016/" target="_blank" rel="noopener"><div class="pick-img"><img src="img/shoe-airhaag.webp" alt="airhaag weiß" loading="lazy"></div><span class="tag">Reise</span><h3>airhaag <small>weiß</small></h3><p>Der Flug nach Los Angeles und lange Tage zwischen Proben und Terminen. Reinschlüpfen ohne Bücken, ultraleicht.</p><span class="pr">159,90 € im Shop →</span></a>
+      <a class="pick tilt rv" href="https://www.tenhaag-shop.de/p/sneaker-weiss-winhaag-1421010006/" target="_blank" rel="noopener"><div class="pick-img"><img src="img/shoe-winhaag.webp" alt="winhaag weiß" loading="lazy"></div><span class="tag">Smart</span><h3>winhaag <small>weiß</small></h3><p>Von Street bis Smart: zu Sakko und Anzug bei Pressterminen, Events und Interviews.</p><span class="pr">159,90 € im Shop →</span></a>
+      <a class="pick tilt rv" href="https://www.tenhaag-shop.de/p/sneaker-schwarz-neohaag-1430090017/" target="_blank" rel="noopener"><div class="pick-img"><img src="img/shoe-neohaag-schwarz.webp" alt="neohaag schwarz" loading="lazy"></div><span class="tag">City</span><h3>neohaag <small>schwarz</small></h3><p>Backstage, Hollywood bei Nacht, Citytrips. Vegan, atmungsaktiv, schwarz für die Abende.</p><span class="pr">149,90 € im Shop →</span></a>
+      <a class="pick tilt rv" href="https://www.tenhaag-shop.de/p/sneaker-weiss-spirithaag-1331090015/" target="_blank" rel="noopener"><div class="pick-img"><img src="img/shoe-spirithaag.webp" alt="spirithaag weiß" loading="lazy"></div><span class="tag">Coaching</span><h3>spirithaag <small>weiß</small></h3><p>Coaching-Sessions und Bühne. Passt zu Jeans und Business-Casual, sauber und ruhig im Look.</p><span class="pr">99,90 € im Shop →</span></a>
+      <a class="pick tilt rv" href="https://www.tenhaag-shop.de/p/sneaker-weiss-gridhaag-1331090134/" target="_blank" rel="noopener"><div class="pick-img"><img src="img/shoe-gridhaag.webp" alt="gridhaag weiß" loading="lazy"></div><span class="tag">Alltag</span><h3>gridhaag <small>weiß</small></h3><p>Papa-Alltag mit meinen zwei Töchtern: Spielplatz, Wald, Einkauf. Leicht, bequem, unkaputtbar.</p><span class="pr">99,90 € im Shop →</span></a>
+    </div>
+    <p class="size rv">Meine Größe: <b>43,5</b> · Gesamtwert der Erstausstattung: <b>819,40 €</b> · Wenn ihr für einen Einsatz einen besseren Schuh habt, tauschen wir gern.</p>
+  </div>
+</section>
+
+<section id="pakete">
+  <div class="wrap">
+    <div class="sec-head rv"><h2>Drei Wege, eine Partnerschaft.</h2><p>Alle Pakete laufen 12 Monate, mit Option auf 24 Monate zu festen Preisen. Weil wir langfristig denken, liegen die Preise deutlich unter dem, was die Leistungen einzeln kosten würden.</p></div>
+    <div class="toggle rv" role="group" aria-label="Preisanzeige"><button type="button" aria-pressed="true" data-v="m">pro Monat</button><button type="button" aria-pressed="false" data-v="y">pro Jahr</button></div>
+    <div class="packs" id="packs">
+      <article class="pack tilt rv">
+        <h3>STEP<small>Der Einstieg</small></h3>
+        <div class="price"><b><span class="month">890 €</span><span class="year">10.680 €</span></b><span><span class="month">/ Monat</span><span class="year">/ Jahr</span> netto</span></div>
+        <div class="was">Marktwert <s><span class="month">ca. 2.700 €</span><span class="year">ca. 32.400 €</span></s></div>
+        <span class="save">Ihr spart rund 67 %</span>
+        <ul>
+          <li>1 Reel pro Monat</li>
+          <li>3 Story-Sequenzen mit Link</li>
+          <li>1 Trainings-Session mit Personal Trainer, inkl. Rohmaterial</li>
+          <li>Highlight „tenhaag“ und Rabattcode</li>
+          <li>Nutzungsrechte Social, 12 Monate</li>
+        </ul>
+        <p class="foot">Gut zum Kennenlernen der Zielgruppe.</p>
+      </article>
+      <article class="pack top tilt rv">
+        <span class="badge">Empfehlung</span>
+        <h3>RUN<small>Content und Shop-Bilder</small></h3>
+        <div class="price"><b><span class="month">1.690 €</span><span class="year">20.280 €</span></b><span><span class="month">/ Monat</span><span class="year">/ Jahr</span> netto</span></div>
+        <div class="was">Marktwert <s><span class="month">ca. 6.200 €</span><span class="year">ca. 74.400 €</span></s></div>
+        <span class="save">Ihr spart rund 73 %</span>
+        <ul>
+          <li>2 Reels pro Monat</li>
+          <li>4 Story-Sequenzen mit Link</li>
+          <li>1 Trainings-Session mit Personal Trainer</li>
+          <li>1 E-Commerce-Studio-Termin pro Monat: 12 freigestellte Bilder + 6 On-Feet-Shots</li>
+          <li>Highlight „tenhaag“ und Rabattcode</li>
+          <li>Nutzungsrechte Shop, Social, Newsletter, 12 Monate</li>
+          <li>Monatliches Reporting</li>
+          <li>Exklusiv: keine andere Schuhmarke</li>
+          <li><strong>Hollywood-Kick-off inklusive</strong></li>
+        </ul>
+        <p class="foot">Das Paket, mit dem ihr Content und Shop-Bilder aus einer Hand bekommt.</p>
+      </article>
+      <article class="pack tilt rv">
+        <h3>HYPER<small>Gesicht der Kampagne</small></h3>
+        <div class="price"><b><span class="month">2.790 €</span><span class="year">33.480 €</span></b><span><span class="month">/ Monat</span><span class="year">/ Jahr</span> netto</span></div>
+        <div class="was">Marktwert <s><span class="month">ca. 10.000 €</span><span class="year">ca. 120.000 €</span></s></div>
+        <span class="save">Ihr spart rund 72 %</span>
+        <ul>
+          <li>3 Reels pro Monat</li>
+          <li>6 Story-Sequenzen mit Link</li>
+          <li>2 Trainings-Sessions mit Personal Trainer</li>
+          <li>1 E-Commerce-Studio-Termin pro Monat</li>
+          <li>4 Kampagnen-Shootings im Jahr mit Profi-Fotograf</li>
+          <li>Ads-Freigabe für eure Kanäle</li>
+          <li>Exklusiv: keine andere Schuhmarke</li>
+          <li>2 Auftritte im Jahr (Events, Store, Messe)</li>
+          <li><strong>Hollywood-Kick-off inklusive</strong></li>
+        </ul>
+        <p class="foot">Für alle, die ein festes Markengesicht wollen.</p>
+      </article>
+    </div>
+
+    <div class="kick rv" id="hollywood">
+      <img src="img/yves-gallery-3.webp" alt="Yves Unser in Bewegung" loading="lazy" style="object-position:50% 30%">
+      <div class="txt">
+        <span class="eyebrow">Hollywood-Kick-off · 22.–30. November</span>
+        <h3>tenhaag fliegt mit nach Los Angeles.</h3>
+        <p>Neun Tage Finalwoche, die Tausende mitverfolgen: Unboxing vor dem Abflug, Training in LA, Reise, Proben und Backstage. Mit täglichen Stories, 2 Reels aus Los Angeles und einem Rückblick nach dem Finale.</p>
+        <p>Was ich auf der Bühne trage, gibt der Veranstalter vor. Überall sonst ist tenhaag dabei.</p>
+        <div class="price"><b>1.490 €</b><span>einmalig netto · Marktwert ca. 3.500 €</span></div>
+        <p class="save" style="margin-top:6px">Kostenlos bei RUN oder HYPER, wenn wir bis 14. November starten.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="marktwert" style="background:var(--stone)">
+  <div class="wrap">
+    <div class="sec-head rv"><h2>Was das einzeln kosten würde.</h2><p>Marktübliche Preise für vergleichbare Leistungen in Deutschland. So seht ihr, wie viel ihr mit der Partnerschaft spart.</p></div>
+    <table class="table rv">
+      <thead><tr><th>Leistung</th><th>Enthält</th><th>Einzelpreis</th></tr></thead>
+      <tbody>
+        <tr><td>Reel auf @yvesunser</td><td>Idee, Dreh, Schnitt, Posting<small>107.000 Follower</small></td><td>900 €</td></tr>
+        <tr><td>Story-Sequenz</td><td>4–6 Frames mit Link und Code</td><td>250 €</td></tr>
+        <tr><td>Trainings-Session mit Personal Trainer</td><td>Session, 10 Clips Rohmaterial</td><td>650 €</td></tr>
+        <tr><td>E-Commerce-Studio, halber Tag</td><td>Model, Studio, Fotograf, Retusche<small>12 freigestellte Bilder + 6 On-Feet</small></td><td>1.600 €</td></tr>
+        <tr><td>Kampagnen-Shooting, ganzer Tag</td><td>Model, Profi-Fotograf, 25 Bilder</td><td>2.800 €</td></tr>
+        <tr><td>Nutzungsrechte 12 Monate</td><td>Shop, Social, Newsletter</td><td>+30 %</td></tr>
+        <tr><td>Ads-Freigabe</td><td>Content in euren Anzeigen</td><td>400 € / Monat</td></tr>
+        <tr><td>Highlight „tenhaag“ + Linkplatzierung</td><td>dauerhaft auf dem Profil</td><td>150 € / Monat</td></tr>
+      </tbody>
+    </table>
+    <div class="compare rv" id="compare">
+      <div><small>RUN einzeln gebucht, pro Monat</small><b>ca. 6.200 €</b><div class="bar"><i data-w="100%"></i></div></div>
+      <div><small>RUN als Partner, pro Monat</small><b>1.690 €</b><div class="bar" style="background:#333"><i data-w="27%"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head rv"><h2>So geht es los.</h2><p>Wenn wir bis Mitte November starten, ist tenhaag schon in der Finalwoche dabei.</p></div>
+    <div class="steps">
+      <div class="step rv"><span class="when">Woche 1</span><h3>Kick-off-Call</h3><p>Paket wählen, die sechs Modelle in 43,5 bestellen, Briefing und Rabattcode.</p></div>
+      <div class="step rv"><span class="when">Bis 14.11.</span><h3>Schuhe und Training</h3><p>Unboxing, erste Trainings-Session und erster Studio-Termin vor dem Abflug.</p></div>
+      <div class="step rv"><span class="when">22.–30.11.</span><h3>Hollywood</h3><p>Finalwoche in Los Angeles mit täglichen Stories und Reels.</p></div>
+      <div class="step rv"><span class="when">Ab Dezember</span><h3>Fester Rhythmus</h3><p>Monatlicher Content, Studio-Termine, Reporting und Planung der Saison.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv"><h2>Konditionen.</h2><p>Klar und fair, damit wir beide gut planen können.</p></div>
+    <div class="terms">
+      <div class="rv"><h3>Partnerschaft</h3><ul>
+        <li>Laufzeit 12 Monate, Abrechnung monatlich</li>
+        <li>Option auf Verlängerung um 24 Monate mit Preisgarantie</li>
+        <li>Exklusivität in der Kategorie Schuhe ab Paket RUN</li>
+        <li>Nach 6 Monaten Sonderkündigung mit 4 Wochen Frist möglich</li>
+        <li>Alle Preise netto zzgl. gesetzlicher MwSt.</li>
+        <li>Optional: 10 % Provision auf Umsätze über meinen Rabattcode</li>
+      </ul></div>
+      <div class="rv"><h3>Von tenhaag</h3><ul>
+        <li>Erstausstattung: die sechs Modelle oben in Größe 43,5</li>
+        <li>Danach jede Saison die passenden Neuheiten für Content und Shootings</li>
+        <li>Für Studio-Shootings zusätzlich Musterpaare in Mustergröße</li>
+        <li>Kurzes Briefing pro Monat und Freigabe innerhalb von 48 Stunden</li>
+        <li>Eine Korrekturrunde pro Inhalt inklusive</li>
+        <li>Alle Posts sind als Werbung gekennzeichnet</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="kontakt">
+  <div class="wrap">
+    <h2 class="rv">Lasst uns loslaufen.</h2>
+    <p class="rv">Ich freue mich auf eine lange Partnerschaft. Sagt mir, welches Paket passt, oder wir bauen gemeinsam eins, das genau zu eurem Budget passt.</p>
+    <div class="cta-row rv"><a class="btn" href="mailto:yves.unser@me.com?subject=tenhaag%20%C3%97%20Yves%20Unser">yves.unser@me.com</a><a class="btn ghost" href="https://www.instagram.com/yvesunser/" target="_blank" rel="noopener">@yvesunser</a><a class="btn ghost" href="https://www.yvesunser.de/mister-universe/" target="_blank" rel="noopener">Mister Universe</a></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Angebot für tenhaag · Yves Unser · Stand 2. November 2026 · gültig bis 30. November 2026</span><span>Produktbilder: tenhaag</span></div></footer>
+
+<script>
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('solid', scrollY > 40), {passive:true});
+
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  e.target.classList.add('in');
+  e.target.querySelectorAll('[data-count]').forEach(countUp);
+  e.target.querySelectorAll('.bar i').forEach(b => b.style.width = b.dataset.w);
+  io.unobserve(e.target);
+}), {threshold:.15});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+function countUp(el){
+  const end = +el.dataset.count, suf = el.dataset.suffix || '';
+  if (reduce) { el.textContent = end + suf; return; }
+  const t0 = performance.now();
+  const tick = t => { const p = Math.min((t - t0) / 1400, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + suf; if (p < 1) requestAnimationFrame(tick); };
+  requestAnimationFrame(tick);
+}
+
+const stage = document.getElementById('stage'), shoe = document.getElementById('shoe'), photo = stage.querySelector('.photo');
+if (!reduce) {
+  stage.addEventListener('pointermove', e => {
+    const r = stage.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    shoe.style.transform = `rotateY(${x * 28}deg) rotateX(${-y * 16}deg) translateZ(40px)`;
+    photo.style.transform = `rotateY(${-14 + x * 8}deg) rotateX(${3 - y * 6}deg)`;
+  });
+  stage.addEventListener('pointerleave', () => { shoe.style.transform = ''; photo.style.transform = ''; });
+}
+
+document.querySelectorAll('.tilt').forEach(card => {
+  if (reduce || matchMedia('(hover: none)').matches) return;
+  card.addEventListener('pointermove', e => {
+    const r = card.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    const lift = card.classList.contains('top') ? ' translateY(-16px)' : '';
+    card.style.transform = `perspective(1200px) rotateY(${x * 7}deg) rotateX(${-y * 7}deg)${lift}`;
+  });
+  card.addEventListener('pointerleave', () => card.style.transform = '');
+});
+
+const spin = document.getElementById('spin'), items = [...spin.children], ring = document.getElementById('ring');
+let angle = 0, last = performance.now();
+function radius(){ return innerWidth < 640 ? 240 : 480; }
+function layout(){
+  items.forEach((it, i) => {
+    const a = angle + i * 360 / items.length;
+    it.style.transform = `rotateY(${a}deg) translateZ(${radius()}px) rotateY(${-a}deg)`;
+    const front = Math.cos(a * Math.PI / 180);
+    it.style.opacity = .35 + .65 * (front + 1) / 2;
+    it.style.zIndex = Math.round(front * 100) + 100;
+    it.querySelector('span').style.opacity = front > .75 ? 1 : 0;
+  });
+}
+function loop(t){
+  const r = ring.getBoundingClientRect();
+  const scrollBoost = (innerHeight - r.top) * .12;
+  angle = (t / 1000) * 14 + scrollBoost;
+  layout();
+  requestAnimationFrame(loop);
+}
+reduce ? layout() : requestAnimationFrame(loop);
+
+document.querySelectorAll('.toggle button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.toggle button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  document.getElementById('packs').classList.toggle('show-year', b.dataset.v === 'y');
+}));
+</script>
+</body>
+</html>
